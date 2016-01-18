@@ -1,0 +1,130 @@
+Test Cases for Mate1.com,,,,,,,
+Sl No.,TestCase,Expected Result,Actual Result,Result,Severity,Remarks,Browser
+1,"1. Login to mate1.com
+2. Press the back button of the browser","1. The page doesn’t go back to login page, simply refreshes the current page",Same as expected,PASS,,Testing for security and brower sessions,Firefox
+2,"1. Login to mate1.com
+2. Logout from mate1.com","1. Display the message ""You have been successfully logged out. Please come back soon!""",Same as expected,PASS,,Testing for security and brower sessions,Firefox
+3,"1. Login to mate1.com
+2. Logout from mate1.com
+3. Press the back button of the browser","1. Display the message ""You have been successfully logged out. Please come back soon!""
+2. Should load back to login page.",Same as expected,PASS,,Testing for security and brower sessions,Firefox
+4,1. Login to mate1.com,"1. All the tab options are displayed:
+a. Subscribe Now
+b. Inbox(highlighting inbox message count)
+c. Interested in me (highlighting no. of interests)
+d. My Matches
+e. Search
+f. Online Now",Same as expected,PASS,,,Firefox
+5,"1. Login to mate1.com 
+2. Hover on ""My Proflie"" tab in the main page.
+","1. Once the mouse is hovered on the ""My Profile"" tab, all the main menu options are displayed:
+a. View Profile
+b. Edit Profile
+c. Add/Edit Photos
+d. Add/Edit Voice
+e. Who's Viewed Me ",Same as expected,PASS,,,Firefox
+6,"1. Navigate to Main Page->My Profile-> Edit Profile-> Edit  Profile option.
+2. Change value in Title field
+3. Choose None option from the dropdown for Have children? 
+4. Click on Save",,Same as expected,PASS,,,Firefox
+7,"1. Navigate to Main Page->My Profile-> Edit Profile-> Edit  Profile option.
+2. Change value in postal code field
+3. Value should be validated. Should not accept null value. ","1. User tries to modify postal code from ""H3H 2G9"" to null (blank).
+3. Click on ""Save"" button.
+4. Redden the postal code text and display error message: 
+""The following errors occurred:
+The Zip/Postal code you entered was not recognized""",Same as expected,PASS,,,Firefox
+8,"1. Navigate to Main Page->My Profile-> Edit Profile-> Edit  Profile option.
+2. Change value in postal code field
+3. Value should be validated. Should accept value in the form of ""ANA NAN"", A=Alphabet, N=Number. ","1. User tries to modify postal code from ""H3H 2G9"" to ""H3H2G9H3H2G9""
+3. Click on ""Save"" button.
+4. Redden the postal code text and display error message: 
+""The following errors occurred:
+The Zip/Postal code you entered was not recognized""",Same as expected,PASS,,,Firefox
+9,"1. Login with the valid credentials
+2. Navigate to Main Page->My Profile-> Edit Profile-> About Me
+3. In the text area for ""About me"" enter a text upto 1500 characters",1. User should be able to enter the text upto 1500 characters in the text area.,Same as expected,PASS,,Testing for character length,Firefox
+10,"1. Login with the valid credentials
+2. Navigate to Main Page->My Profile-> Edit Profile-> About Me
+3. In the text area for ""About me"" enter a text upto 1500 characters
+4. Click on save ","1. User should be able to enter the text upto 1500 characters in the text area.
+2. After clicking save, the 1500 character text should be saved and displayed properly for the user.","1. mate1.com website is successfully launched
+2. Valid user credentials should allowed the user to login
+3. A web page where the user can edit profile was opened
+4. User entered the text upto 1500 characters in the text area.
+5. After clicking save, the 1500 character text was saved and but it was not readable.",FAIL,MAJOR,"Testing readability of the text content.
+The text of 1500 characters without space is going out of the visible area and is not so user friendly to read.",Firefox
+11,"1. Login with the valid credentials
+2. Navigate to Main Page->My Profile-> Edit Profile-> About Me
+3. In the text area for ""About me"" enter a text upto 1500 characters
+4. Click on save 
+5. Again try to edit the same text area with some other text.","1. User should be able to enter the text upto 1500 characters in the text area.
+2. After clicking save, the 1500 character text should be saved and displayed properly for the user.
+3. User should be able to modify the text entered in that area with the text that user wishes",Same as expected,PASS,,,Firefox
+12,"1. Login with the valid credentials
+2. Navigate to Main Page->My Profile-> Edit Profile-> About Me
+3. In the text area for ""About me"" enter a text consisting of special characters
+4. Click on save 
+5. Again click on Edit option to check the content of the text field.","1. Should display ""sadhana@gmail.com"" in About Me section with a message saying ""Section Updated"".
+2. Click again on Edit option of About Me section.
+3. Content remains same, ""sadhana@gmail.com""","1. Doesnt display the content updated but shows message ""Section Updated"".
+2. Click again on Edit option of About Me section.
+3. Content changes to ""sadhana"".",FAIL,MAJOR,"Ideally the text entered should be displayed as provided, even in the editable format.",Firefox
+13,"1. Navigate to Main Page->My Profile-> Edit Profile-> Add/Edit Photos option
+2. Direct to the page to upload a photo.
+3. Click on Upload photo option","1. Open a Flie Explorer to select the photo to be uploaded.
+5. Click on Open option 
+6. Put photo to upload with blank caption field, for photo to be reviewed.
+6. Click on Save.
+7. Should display error message: ""Caption cannot be blank""",Same as expected,PASS,,,Firefox
+14,"1. Navigate to Main Page->My Profile-> Edit Profile-> Add/Edit Photos option
+2. Direct to the page to upload a photo.
+3. Click on Use my Facebook picture option","1. Open a new window with facebook credentials for input.
+5. After providing login credentials, redirects to a permission page.
+6. Click Cancel option
+7. Does not upload any photo from facebook",Same as expected,PASS,,,Firefox
+15,1. Navigate to Main Page->My Profile-> Edit Profile-> Who's viewed my proflie option,"1. Pop up an iframe displaying the message ""Want to see who's been checking you out?
+Upgrade now and lock in your rate"" along with the plans.",Same as expected,PASS,,,Firefox
+16,"1. Navigate to Main Page->My Profile-> Edit Profile-> Who's viewed my proflie option
+3. Click on the cross button to close the iframe.","1. Pop up an iframe displaying the message ""Want to see who's been checking you out?
+Upgrade now and lock in your rate"" along with the plans.
+3. Click on the cross button to close the iframe.
+4. The page remains in its previous state before clicking the Who's viewed my proflie option",Same as expected,PASS,,,Firefox
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
